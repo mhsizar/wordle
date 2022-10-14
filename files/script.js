@@ -82,9 +82,7 @@ function checkGuess () {
         if (letterPosition === -1) {
             letterColor = 'lightgrey'
         } else {
-            // now, letter is definitely in word
-            // if letter index and right guess index are the same
-            // letter is in the right position 
+            
             if (currentGuess[i] === rightGuess[i]) {
                 // shade rgb(101, 249, 43) 
                 letterColor = 'rgb(101, 249, 43)'
@@ -138,16 +136,16 @@ function insertLetter (pressedKey) {
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
-  // We create a Promise and return it
+  
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
-    // const node = document.querySelector(element);
+    
     const node = element
     node.style.setProperty('--animate-duration', '0.3s');
     
     node.classList.add(`${prefix}animated`, animationName);
 
-    // When the animation ends, we clean the classes and resolve the Promise
+    
     function handleAnimationEnd(event) {
       event.stopPropagation();
       node.classList.remove(`${prefix}animated`, animationName);
