@@ -6,7 +6,7 @@ let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
 
-//console.log(rightGuessString)
+//console.log(rightGuessString)  //Don't show the result in the console
 
 function initBoard() {
     let board = document.getElementById("board");
